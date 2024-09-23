@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpinchos Preguntones</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="background-image" src="./Assets/CapiCute.webp" alt="carpinchos">
+    <div class="home-container" id="home-container">
+        <h1>Carpinchos Preguntones</h1>
+        <input type="text" id="username1" placeholder="Nombre Jugador 1">
+<input type="text" id="username2" placeholder="Nombre Jugador 2">
+        <button onclick="startGame()">Comenzar Juego</button>
+    </div>
+
+    <div class="container" id="game-container" style="display: none;">
+        <h1>Carpinchos preguntones</h1>
+        <div class="bienvenida" id="welcome-message"></div>
+        <div class="puntuacion" id="score">Puntuación: 0</div>
+        <div id="score-display"></div>
+        <div id="current-player"></div>
+        <div class="category-container" id="category-container">
+            <h2>Selecciona una categoría</h2>
+            <button onclick="selectCategory('Deportes')">Deportes</button>
+            <button onclick="selectCategory('Entretenimiento')">Entretenimiento</button>
+            <button onclick="selectCategory('Historia')">Historia</button>
+            <button onclick="selectCategory('Cultura General')">Cultura General</button>
+            <button onclick="selectCategory('Ciencia')">Ciencia</button>
+            <button onclick="selectCategory('Geografia')">Geografía</button>
+        </div>
+        <div class="question-container" id="question-container" style="display: none;">
+            <div class="pregunta" id="question">Pregunta aparecerá aquí</div>
+            <div class="opciones" id="options"></div>
+        </div>
+        <div id="result"></div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Siguiente Pregunta</button>
+    </div>
+
+    <script src="./Javascript/script.js"></script>
+</body>
+</html>
